@@ -1,0 +1,91 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body{
+    background-color: #1c1c1c;
+    min-height: 100vh;
+    min-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main{
+min-width: 70vw;
+position: relative;
+background: linear-gradient(#616161 0%,#333 10%,#222);
+border: 2px solid black;
+box-shadow: 0px 15px 46px 0px black;
+padding: 20px;
+border-radius: 15px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+overflow: hidden;
+color: white;
+}
+.main::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 50%;
+    width: 100%;
+    background-color:rgb(255,255, 255, 0.1);
+    z-index: 11;
+
+}
+.light{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #22e4e3;
+    box-shadow: 0 0 5px #22e4e3,
+    0 0 10px #22e4e3,
+    0 0 40px #22e4e3;
+
+
+}
+.active{
+    background-color: transparent;
+    box-shadow: none;
+    border: 1px solid black;
+
+}
+.progress{
+    position: relative;
+width: 40vw;
+height: 28px;
+border-radius: 15px;
+border: 2px solid black;
+overflow: hidden;
+box-shadow: 0px 5px 38px 1px black;
+
+}
+.persent{
+position: absolute;
+top: 0;
+left: 0;
+width: 0;
+height: 100%;
+background: linear-gradient(45deg, #22e4e3,#2196f3);
+border-radius: 15px;
+animation: myanimation 6s ease-in-out infinite;
+}
+@keyframes myanimation{
+    0%{
+        width: 0;
+        left: 0;
+    }
+    50%{
+        width: 100%;
+        left: 0;
+    }
+    100%{
+        width: 0;
+        left: 100%;
+    }
+
+}
